@@ -28,6 +28,7 @@ Streamer.bot reagiert auf Trigger aus OBS/Twitch und ruft die entsprechenden API
   - Lokale API-Dateien:
     - `api.txt` und `duration.txt` → **werden durch das OBS-Plugin [Tuna](https://obsproject.com/forum/resources/tuna-now-playing-widget-current-song.843/) erzeugt**
     - Konfiguration für Tuna wird mitgeliefert
+![image](https://github.com/user-attachments/assets/fa145186-eccc-4aab-8980-8c5aca4aad8c)
 	
 ---
 

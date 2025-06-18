@@ -20,7 +20,7 @@ Streamer.bot reagiert auf Trigger aus OBS/Twitch und ruft die entsprechenden API
 
 ## ⚙️ Voraussetzungen
 
-- OBS-Studio
+- [OBS-Studio](https://obsproject.com/de/download)
 - OBS-Plugin [Tuna](https://obsproject.com/forum/resources/tuna-now-playing-widget-current-song.843/)
 - [Streamer.bot](https://streamer.bot/)
 - PHP (lokal empfohlen unter Windows mit WAMP/XAMPP)

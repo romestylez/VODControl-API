@@ -1,7 +1,17 @@
 
 # 🎥 VODControl Api
 
-Diese API ermöglicht das einfache Auslesen und Steuern von VOD-Dateien für Twitch/OBS-Setups, insbesondere für 24/7-Streaming-Formate mit automatisierten Overlay-Texten, Speicherinformationen und Playlist-Logik.
+Diese API ermöglicht das einfache Auslesen, Verwalten und Steuern von VOD-Dateien für Twitch/OBS-Setups – ideal für 24/7-VOD-Streamingkanäle. Sie stellt verschiedene Endpunkte zur Verfügung, die sich flexibel über Streamer.bot oder OBS einbinden lassen.
+
+Funktionen im Überblick:
+📂 Automatische Auswertung eines VOD-Verzeichnisses (UNC- oder lokaler Pfad)
+⏩ VOD-Steuerung per Chatbefehl (skippen, vorspulen, zurückspulen, spezielles VOD wiedergeben)
+🧾 Live-Abruf des aktuellen VOD-Titels, der Restlaufzeit und der Endzeit
+💾 Anzeige von Speicherbelegung und VOD-Anzahl vom Server
+📤 Upload der VOD-Liste auf Pastebin (inkl. Link-Ausgabe im Chat)
+📡 Kompatibel mit Streamer.bot („Fetch URL“-Aktionen)
+
+Durch die zentrale vod-config.php ist das System flexibel konfigurierbar und kann problemlos auf andere Setups übertragen werden.
 
 ---
 

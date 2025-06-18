@@ -19,7 +19,7 @@ Durch die zentrale vod-config.php ist das System flexibel konfigurierbar und kan
 
 Die API ist vollständig kompatibel mit [Streamer.bot](https://streamer.bot/) und kann über **Fetch URL**-Aktionen eingebunden werden. Damit kannst du:
 
-- die `title.php`, `game.php`, `time_left.php`, `storage.php` etc. live im Stream anzeigen
+- die `title.php`, `categorie.php`, `time_left.php`, `storage.php` etc. live im Stream anzeigen
 - automatisiert den Twitch-Titel anpassen (z. B. bei VOD-Wechsel)
 - per Chatbefehl VODs vorspulen, zurückspulen oder pausieren (`seek.php`)
 - aus einem Archivordner einen vollständigen 24/7-VOD-Streamingkanal betreiben
@@ -103,7 +103,7 @@ return [
 | `vodlisturl.php`        | Gibt die URL der letzten Pastebin-VOD-Liste zurück |
 | `latest_vod.php`        | Zeigt den Dateinamen der neuesten `.mp4`-Datei im VOD-Verzeichnis an |
 | `title.php`             | Zeigt den bereinigten VOD-Titel mit Datum oder einem Hinweis, wenn kein VOD läuft |
-| `game.php`              | Gibt die aktuelle Kategorie zurück (z. B. "IRL") dies wird aus dem Title extrahiert |
+| `categorie.php`         | Gibt die aktuelle Kategorie zurück (z. B. "IRL") dies wird aus dem Title extrahiert |
 | `storage.php`           | Gibt Gesamtspeicher, freien Speicher, belegten Speicher **und VOD-Anzahl** aus |
 | `seek.php`              | Ermöglicht das Vorspulen oder Zurückspulen des aktuellen VODs |
 | `time_uhr.php`          | Zeigt an bis wann das aktuelle VOD noch läuft |

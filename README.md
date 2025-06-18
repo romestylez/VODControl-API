@@ -33,7 +33,7 @@ Streamer.bot reagiert auf Trigger aus OBS/Twitch und ruft die entsprechenden API
 ## 📁 Tuna Konfiguration
 Trefft im OBS-Plugin "Tuna" bitte folgende Einstellungen      
 
-![image](https://github.com/user-attachments/assets/03311b71-10c7-488c-a295-e903d95e62e2)
+![image](https://github.com/user-attachments/assets/9bc3efc3-713c-485d-b418-04d34f7ce683)
 	
 ---
 

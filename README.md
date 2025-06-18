@@ -20,7 +20,9 @@ Streamer.bot reagiert auf Trigger aus OBS/Twitch und ruft die entsprechenden API
 
 ## ⚙️ Voraussetzungen
 
-- OBS-Studio mit dem Plugin [Tuna](https://obsproject.com/forum/resources/tuna-now-playing-widget-current-song.843/)
+- OBS-Studio
+- OBS-Plugin [Tuna](https://obsproject.com/forum/resources/tuna-now-playing-widget-current-song.843/)
+- [Streamer.bot](https://streamer.bot/)
 - PHP (lokal empfohlen unter Windows mit WAMP/XAMPP)
 - Curl + `cacert.pem` für HTTPS-Kommunikation (z. B. mit Pastebin)
 - Schreib-/Lesezugriff auf:
@@ -33,7 +35,8 @@ Streamer.bot reagiert auf Trigger aus OBS/Twitch und ruft die entsprechenden API
 ## 📁 Tuna Konfiguration
 Trefft im OBS-Plugin "Tuna" bitte folgende Einstellungen      
 
-![image](https://github.com/user-attachments/assets/9bc3efc3-713c-485d-b418-04d34f7ce683)
+![image](https://github.com/user-attachments/assets/a25e1158-faac-465c-ba15-b8d559187221)
+
 	
 ---
 

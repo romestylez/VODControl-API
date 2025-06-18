@@ -20,16 +20,24 @@ Streamer.bot reagiert auf Trigger aus OBS/Twitch und ruft die entsprechenden API
 
 ## ⚙️ Voraussetzungen
 
-- OBS-Studio mit dem Plugin [Tuna](https://obsproject.com/forum/resources/tuna-now-playing-widget-current-song.843/)
+- OBS-Studio
+- OBS-Plugin [Tuna](https://obsproject.com/forum/resources/tuna-now-playing-widget-current-song.843/)
+- [Streamer.bot](https://streamer.bot/)
 - PHP (lokal empfohlen unter Windows mit WAMP/XAMPP)
 - Curl + `cacert.pem` für HTTPS-Kommunikation (z. B. mit Pastebin)
 - Schreib-/Lesezugriff auf:
   - VOD-Verzeichnis (UNC oder lokaler Pfad)
   - Lokale API-Dateien:
     - `api.txt` und `duration.txt` → **werden durch das OBS-Plugin [Tuna](https://obsproject.com/forum/resources/tuna-now-playing-widget-current-song.843/) erzeugt**
-    - Konfiguration für Tuna wird mitgeliefert
-![image](https://github.com/user-attachments/assets/fa145186-eccc-4aab-8980-8c5aca4aad8c)
 	
+---
+
+## 📁 Tuna Konfiguration
+Im OBS-Plugin Tuna bitte folgende Einstellungen vornehmen
+![image](https://github.com/user-attachments/assets/fa145186-eccc-4aab-8980-8c5aca4aad8c)
+
+Im Reiter "VNC" wählt ihr bitte eure Szene sowie die Quelle aus und klickt anschließend auf "Hinzufügen".
+
 ---
 
 ## 📁 Zentrale Konfiguration

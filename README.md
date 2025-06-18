@@ -40,6 +40,12 @@ Im Reiter "VNC" wählt ihr bitte eure Szene sowie die Quelle aus und klickt ansc
 
 ---
 
+## 📁 Streamer.bot Konfiguration
+Im Streamer.bot kann die API über Twitch-Chat Commands abgefragt werden. Hier mal ein Beispiel
+![image](https://github.com/user-attachments/assets/d86fd3ce-5871-4bd3-b367-2dc4f2bd259c)
+
+---
+
 ## 📁 Zentrale Konfiguration
 
 Alle Pfade, API-Keys und Dateinamen werden zentral in `vod-config.php` gesetzt.

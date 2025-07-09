@@ -1,24 +1,25 @@
 <?php
 $config = require __DIR__ . '/vod-config.php';
 
-$apiPath = $config['files']['api'];
-$durPath = $config['files']['duration'];
+// Zeitzone setzen
+date_default_timezone_set($config['system']['timezone'] ?? 'Europe/Berlin');
 
-if (!file_exists($apiPath) || !file_exists($durPath) || !filesize($apiPath) || !filesize($durPath)) exit;
+$apiPath = $config['files']['api'];
+$timeLeftPath = $config['files']['time_left'];
+
+if (!file_exists($apiPath) || !file_exists($timeLeftPath) || !filesize($apiPath) || !filesize($timeLeftPath)) exit;
 
 $data = json_decode(file_get_contents($apiPath), true);
-$duration = trim(file_get_contents($durPath));
+$time_left = trim(file_get_contents($timeLeftPath));
 
-if (!is_array($data) || !isset($data['playback_time']) || !$duration) exit;
+if (!is_array($data) || !isset($data['playback_time']) || !$time_left) exit;
 
-$start = DateTime::createFromFormat('H:i:s', $data['playback_time']);
-if (!$start) exit;
+$now = time();
 
-$parts = explode(':', $duration);
-if (count($parts) !== 3) exit;
+$parts = explode(':', $time_left);
+if (count($parts) < 2) exit;
 
-$interval = new DateInterval(sprintf('PT%dH%dM%dS', $parts[0], $parts[1], $parts[2]));
-$start->add($interval);
+$rest_secs = ($parts[0] * 3600) + ($parts[1] * 60) + ($parts[2] ?? 0);
+$end_ts = $now + $rest_secs;
 
-echo "🕛 bis " . $start->format('H:i:s');
-?>
+echo "🕛 bis " . date('H:i', $end_ts);

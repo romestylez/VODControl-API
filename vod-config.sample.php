@@ -20,6 +20,7 @@ return [
     'files' => [
         'api' => 'C:\\API\\api.txt',
         'duration' => 'C:\\API\\duration.txt',
-        'pastebin_latest' => 'C:\\API\\pastebin_latest.txt'
+        'pastebin_latest' => 'C:\\API\\pastebin_latest.txt',
+	'time_left' => 'C:\\API\\time_left.txt'
     ]
 ];

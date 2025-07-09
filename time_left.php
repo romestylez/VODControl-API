@@ -4,37 +4,38 @@ $config = require __DIR__ . '/vod-config.php';
 date_default_timezone_set('Europe/Berlin');
 
 $api_file = $config['files']['api'];
-$duration_file = $config['files']['duration'];
+$time_left_file = $config['files']['time_left'];
 
 header('Content-Type: text/plain');
 
-// Prüfen ob beide Dateien vorhanden sind
-if (!file_exists($api_file) || !file_exists($duration_file)) {
+if (!file_exists($api_file) || !file_exists($time_left_file)) {
     echo "Fehlende Dateien.";
     exit;
 }
 
 // Werte laden
 $api_data = json_decode(file_get_contents($api_file), true);
-$start = $api_data['playback_time']; // z. B. "09:47:00"
-$duration = trim(file_get_contents($duration_file)); // z. B. "3:17:32"
-
-// Zeitpunkte berechnen
-$start_ts = strtotime($start);
-$parts = explode(':', $duration);
-$end_ts = $start_ts + ($parts[0] * 3600) + ($parts[1] * 60) + ($parts[2] ?? 0);
+$start_ts = strtotime($api_data['playback_time']); // fester Startzeitpunkt
 $now = time();
-$diff = $end_ts - $now;
+
+// time_left.txt lesen
+$time_left = trim(file_get_contents($time_left_file)); // z. B. "6:43:12"
+$parts = explode(':', $time_left);
+$rest_secs = ($parts[0] * 3600) + ($parts[1] * 60) + ($parts[2] ?? 0);
+
+// Endzeit berechnen: jetzt + restliche Sekunden
+$end_ts = $now + $rest_secs;
+
+// Ausgabezeit
+$stunden = floor($rest_secs / 3600);
+$minuten = floor(($rest_secs % 3600) / 60);
+$end_time_formatted = date('H:i', $end_ts);
 
 // Wenn das Video schon vorbei ist
-if ($diff < 0) {
+if ($rest_secs <= 0) {
     echo "Video ist vorbei.";
     exit;
 }
 
-// Formatierte Ausgabe
-$stunden = floor($diff / 3600);
-$minuten = floor(($diff % 3600) / 60);
-$bis_uhrzeit = date('H:i:s', $end_ts);
-
-echo "$stunden Stunden, $minuten Minuten bis $bis_uhrzeit";
+// Ausgabe
+echo "$stunden Stunden, $minuten Minuten bis $end_time_formatted";

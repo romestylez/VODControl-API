@@ -29,7 +29,7 @@ $end_ts = $now + $rest_secs;
 // Ausgabezeit
 $stunden = floor($rest_secs / 3600);
 $minuten = floor(($rest_secs % 3600) / 60);
-$end_time_formatted = date('H:i', $end_ts);
+$end_time_formatted = date('H:i:s', $end_ts);
 
 // Wenn das Video schon vorbei ist
 if ($rest_secs <= 0) {

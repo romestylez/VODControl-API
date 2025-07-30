@@ -22,4 +22,4 @@ if (count($parts) < 2) exit;
 $rest_secs = ($parts[0] * 3600) + ($parts[1] * 60) + ($parts[2] ?? 0);
 $end_ts = $now + $rest_secs;
 
-echo "🕛 bis " . date('H:i', $end_ts);
+echo "🕛 bis " . date('H:i:s', $end_ts);

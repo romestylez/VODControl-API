@@ -135,7 +135,7 @@ Da die API keine Authentifizierung verwendet, wird empfohlen bei öffentlicher N
 
 ## 🤝 Credits
 
-Entwickelt von romestylez für den Stream von [smtxlosttv]([https://streamer.bot/](https://www.twitch.tv/smtxlosttv)) – mit Fokus auf Automatisierung und einfache Integration.
+Entwickelt von romestylez für den Stream von [smtxlosttv](https://www.twitch.tv/smtxlosttv) – mit Fokus auf Automatisierung und einfache Integration.
 
 
 ---

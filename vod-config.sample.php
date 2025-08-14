@@ -10,7 +10,7 @@ return [
         'timezone' => 'Europe/Berlin'
     ],
     'version' => [
-        'current' => '1.0.3'
+        'current' => '1.0.4'
     ],
     'pastebin' => [
 		'api_key' => 'YOUR-PASTEBIN-API-GOES-HERE',
@@ -21,6 +21,6 @@ return [
         'api' => 'C:\\API\\api.txt',
         'duration' => 'C:\\API\\duration.txt',
         'pastebin_latest' => 'C:\\API\\pastebin_latest.txt',
-	'time_left' => 'C:\\API\\time_left.txt'
+		'time_left' => 'C:\\API\\time_left.txt'
     ]
 ];

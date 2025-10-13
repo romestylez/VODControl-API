@@ -17,10 +17,19 @@ if (!is_array($data) || !isset($data['title']) || trim($data['title']) === '') {
 $title = $data['title'];
 
 // Datum extrahieren
-if (preg_match('/D-(\d{2}\.\d{2}\.\d{4})$/', $title, $match)) {
+if (preg_match('/D-(\d{2}\.\d{2}\.\d{4})/', $title, $match)) {
     $datum = $match[1];
 } else {
+    // Kein Datum im Titel -> passenden Dateinamen im VOD-Ordner suchen
     $datum = "";
+    $vodDir = $config['vod']['unc_path'];
+    $files = glob($vodDir . '\\*.mp4');
+    foreach ($files as $file) {
+        if (stripos($file, $title) !== false && preg_match('/D-(\d{2}\.\d{2}\.\d{4})/', $file, $match)) {
+            $datum = $match[1];
+            break;
+        }
+    }
 }
 
 // Titel bereinigen

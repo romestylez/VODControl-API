@@ -25,7 +25,12 @@ $files = glob($vod_dir . '\\*.mp4');
 
 $match = null;
 foreach ($files as $file) {
-    if (stripos(basename($file), $title) !== false) {
+    $filename = basename($file);
+
+    // Nur ganze Wörter / Wortgruppen matchen
+    $pattern = '/\b' . preg_quote($title, '/') . '\b/i';
+
+    if (preg_match($pattern, $filename)) {
         $match = $file;
         break;
     }

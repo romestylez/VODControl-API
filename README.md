@@ -34,7 +34,7 @@ Streamer.bot reagiert auf Trigger aus OBS/Twitch und ruft die entsprechenden API
 - OBS-Plugin [Tuna](https://obsproject.com/forum/resources/tuna-now-playing-widget-current-song.843/)
 - [Streamer.bot](https://streamer.bot/)
 - PHP (lokal empfohlen unter Windows mit WAMP/XAMPP)
-- Curl + `[cacert.pem](https://curl.se/docs/caextract.html)` für HTTPS-Kommunikation (z. B. mit Pastebin)
+- Curl + [cacert.pem](https://curl.se/docs/caextract.html) für HTTPS-Kommunikation (z. B. mit Pastebin)
 - Schreib-/Lesezugriff auf:
   - VOD-Verzeichnis (UNC oder lokaler Pfad)
   - Lokale API-Dateien:
